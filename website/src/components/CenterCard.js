@@ -1,12 +1,13 @@
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Card from '@mui/material/Card'
+import Card from '@mui/material/Card';
+import { Title } from '@mui/icons-material';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
-    minHeight: '95vh',
+    minHeight: '97vh',
     textAlign: 'center',
     color: theme.palette.text.secondary,
 }));
@@ -14,9 +15,10 @@ const Item = styled(Paper)(({ theme }) => ({
 function CenterCard() {
     return (
         <div className="CenterCard">
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1}}>
                 <Item>
-                    <Card variant="outlined">abc</Card>
+                        <header>Home</header>
+
                 </Item>
             </Box>
         </div>

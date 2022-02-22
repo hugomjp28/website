@@ -3,24 +3,26 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container'
 import CenterCard from './components/CenterCard'
-import TopBar from './components/TopBar';
+import NavigationBar from './components/NavBar/NavigationBar';
+import { Divider } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <TopBar />
-        <CssBaseline />
-        <Container maxWidth="false">
-          <Grid container spacing={1} >
-            <Grid item xs={3} />
-            <Grid item xs={6}>
-              <CenterCard />
-            </Grid>
-            <Grid item xs={3} />
+      <CssBaseline />
+      <Container maxWidth="false">
+        <Grid container spacing={1} >
+          <Grid item xs={2.5}>
+            <NavigationBar />
           </Grid>
-        </Container>
-      </header>
+          <Grid item xs={0.1}>
+            <Divider variant='fullWidth' orientation="vertical" />
+          </Grid>
+          <Grid item xs={9.4}>
+            <CenterCard />
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 }
