@@ -1,6 +1,7 @@
 import { ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { FormattedMessage } from "react-intl";
 function NavBarListItem({ name, selected, setSelected }) {
-    const isSelected = selected == name ? true : false
+    const isSelected = selected === name ? true : false
     function click(){
         setSelected(name)
         //redirect to url
@@ -8,7 +9,9 @@ function NavBarListItem({ name, selected, setSelected }) {
     return (
         <ListItem disablePadding divider>
             <ListItemButton selected={isSelected} onClick={click}>
-                <ListItemText primary={name} />
+                <ListItemText>
+                    <FormattedMessage id={name}/>
+                </ListItemText>
             </ListItemButton>
         </ListItem>
     );

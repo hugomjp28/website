@@ -14,3 +14,28 @@
   font-size: calc(10px + 2vmin);
   color: rgb(255, 255, 255);
 }
+
+@keyframes buttonExample {
+  0%   {color:black}
+  100% {color: white}
+}
+.LanguageButton {
+  font-size: calc(12px);
+  background-color: #d39dff;
+  width: 100%;
+  text-align: left;
+  border-bottom: #d39dff;
+  border-right: #d39dff;
+  border-top: #d39dff;
+  border-left: #d39dff;
+  animation-fill-mode: forwards;
+}
+
+.LanguageButton:focus {
+  -webkit-animation: buttonExample 0.35s forwards;
+          animation: buttonExample 0.35s forwards;
+}
+.LanguageButton:active {
+  -webkit-animation: none;
+          animation: none;
+}
